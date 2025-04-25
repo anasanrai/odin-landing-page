@@ -19,7 +19,7 @@ Welcome to **Odin LAND**, a modern, responsive, and bilingual landing page built
 
 Here is the embedded live demo of my project:
 
-[Live Demo]()
+[Live Demo](https://anasanrai.github.io/odin-landing-page/)
 
 
 ## 🛠️ Technologies Used
