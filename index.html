@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page Project</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Odin<em>LAND</em></div>
+      <ul>
+        <li><a href="#features"><span data-lang="en">Features</span><span data-lang="np">विशेषताहरू</span></a></li>
+        <li><a href="/pages/about.html"><span data-lang="en">About</span><span data-lang="np">हाम्रोबारे</span></a></li>
+        <li><a href="#cta"><span data-lang="en">Sign Up</span><span data-lang="np">साइन अप</span></a></li>
+        <li><a href="#cta"><span data-lang="en">FAQ</span><span data-lang="np">प्रश्नोत्तर</span></a></li>
+      </ul>
+      <button id="lang-toggle">नेपाली</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span data-lang="en">Welcome to Odin<em>LAND</em></span>
+        <span data-lang="np">Odin<em>LAND</em> मा स्वागत छ</span>
+      </h1>
+      <p>
+        <span data-lang="en">Discover a modern solution for your needs. Simple. Fast. Effective.</span>
+        <span data-lang="np">तपाईंको आवश्यकता अनुसार आधुनिक समाधान खोज्नुहोस्। सरल। छिटो। प्रभावकारी।</span>
+      </p>
+      <a href="#cta" class="btn">
+        <span data-lang="en">Get Started</span>
+        <span data-lang="np">सुरु गर्नुहोस्</span>
+      </a>
+    </div>
+    <img src="/images/cover.jpg" alt="Hero Image">
+  </section>
+
+  <section id="features" class="Features">
+    <h2>
+      <span data-lang="en">Features</span>
+      <span data-lang="np">विशेषताहरू</span>
+    </h2>
+    <div class="Features-list">
+      <div class="Features">
+        <h3><span data-lang="en">Easy to Use</span><span data-lang="np">सजिलो प्रयोग</span></h3>
+        <p><span data-lang="en">Our platform is intuitive and user-friendly.</span><span data-lang="np">हाम्रो प्लेटफर्म सहज र प्रयोगमैत्री छ।</span></p>
+      </div>
+      <div class="Features">
+        <h3><span data-lang="en">Fast Performance</span><span data-lang="np">छिटो प्रदर्शन</span></h3>
+        <p><span data-lang="en">Enjoy lightning-fast speeds and reliability.</span><span data-lang="np">विजुली जस्तो छिटो र भरपर्दो सेवा।</span></p>
+      </div>
+      <div class="Features">
+        <h3><span data-lang="en">24/7 Support</span><span data-lang="np">२४/७ सहयोग</span></h3>
+        <p><span data-lang="en">We're here to help, anytime you need us.</span><span data-lang="np">हामी सधैं तपाईंको सहयोगका लागि तयार छौं।</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-container">
+    <h2><span data-lang="en">About Us</span><span data-lang="np">हाम्रोबारे</span></h2>
+    <p>
+      <span data-lang="en">Landing page is dedicated to providing the best solutions for our users. Our team is passionate about innovation and customer satisfaction.</span>
+      <span data-lang="np">यो ल्यान्डिङ पेजले प्रयोगकर्ताहरूलाई उत्कृष्ट समाधान प्रदान गर्न समर्पित छ। हाम्रो टोली नवप्रवर्तन र ग्राहक सन्तुष्टिमा समर्पित छ।</span>
+    </p>
+  </section>
+
+  <section id="cta" class="cta">
+    <h2>
+      <span data-lang="en">Ready to Get Started?</span>
+      <span data-lang="np">सुरु गर्न तयार हुनुहुन्छ?</span>
+    </h2>
+    <a href="#" class="btn">
+      <span data-lang="en">Sign Up Now</span>
+      <span data-lang="np">अहिले साइन अप गर्नुहोस्</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>
+      <span data-lang="en">&copy; 2025 Odin<em>LAND</em>. All rights reserved.</span>
+      <span data-lang="np">&copy; २०२५ Odin<em>LAND</em>। सबै अधिकार सुरक्षित।</span>
+    </p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('lang-toggle');
+    let currentLang = 'en';
+
+    toggleButton.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'np' : 'en';
+      toggleButton.textContent = currentLang === 'en' ? 'नेपाली' : 'English';
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === currentLang ? '' : 'none';
+      });
+    });
+
+    // Set default language on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === currentLang ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
