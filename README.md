@@ -26,7 +26,6 @@ Here is the embedded live demo of my project:
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
 
 ## 📁 Project Structure
 
