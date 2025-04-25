@@ -13,7 +13,7 @@ Welcome to **Odin LAND**, a modern, responsive, and bilingual landing page built
 
 ## 📸 Preview
 
-![Landing Page Screenshot](images/landing-page.png)
+![Landing Page Screenshot](images/landing-page.jpg)
 
 # Project Live Demo
 
